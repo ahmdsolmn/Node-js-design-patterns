@@ -64,8 +64,6 @@ const done = (err) => {
     process.exit(1);
   }
   if (--streams === 0) {
-    console.log(times);
-    console.log(sizes);
     console.log("Space Efficency:");
     FORMATS.forEach((format) =>
       console.log(`${format}:\t\t${(sizes[format] / sizes.original) * 100}%`)
